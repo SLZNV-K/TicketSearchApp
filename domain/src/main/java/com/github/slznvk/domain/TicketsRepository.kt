@@ -1,11 +1,8 @@
 package com.github.slznvk.domain
 
 
-interface Repository {
-
+interface TicketsRepository {
     suspend fun loadOffers(): Offers
-
     suspend fun loadTicketsOffers(): TicketsOffers
-
     suspend fun loadTickets(): Tickets
 }
