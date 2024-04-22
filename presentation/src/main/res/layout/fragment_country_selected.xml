@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/common_spacing"
+    tools:context=".ui.CountrySelectedFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/inputField"
+        android:layout_width="match_parent"
+        android:layout_height="96dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/rounded_background_small"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/placeOfDeparture"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:layout_marginStart="@dimen/reduced_spacing"
+            android:background="@color/gray4"
+            android:digits="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+            android:hint="@string/departure_hint"
+            android:inputType="textCapSentences"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray6"
+            app:layout_constraintBottom_toTopOf="@id/placeOfArrival"
+            app:layout_constraintStart_toEndOf="@id/iconBack"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/swapButtom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_spacing"
+            android:src="@drawable/swap_icon"
+            app:layout_constraintBottom_toBottomOf="@id/placeOfDeparture"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/placeOfDeparture" />
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginEnd="@dimen/common_spacing"
+            android:background="@drawable/line_separator"
+            app:layout_constraintBottom_toTopOf="@id/placeOfArrival"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/placeOfArrival"
+            app:layout_constraintTop_toBottomOf="@id/placeOfDeparture" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing"
+            android:src="@drawable/arrow_back_icon"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/placeOfArrival"
+            android:layout_width="wrap_content"
+            android:layout_height="21dp"
+            android:background="@color/gray4"
+            android:digits="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
+            android:hint="@string/arrival_hint"
+            android:inputType="textCapSentences"
+            android:textColor="@color/white"
+            android:textColorHint="@color/gray6"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/placeOfDeparture"
+            app:layout_constraintTop_toBottomOf="@id/placeOfDeparture"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/clearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/common_spacing"
+            android:src="@drawable/clear_icon"
+            app:layout_constraintBottom_toBottomOf="@id/placeOfArrival"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/placeOfArrival" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputField">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/returnDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/reduced_spacing"
+            android:background="@drawable/backgroud_radius_50"
+            android:backgroundTint="@color/gray3"
+            android:padding="10dp"
+            android:text="@string/returnText"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:tint="@color/gray7"
+            app:icon="@drawable/add_icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/todayDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/reduced_spacing"
+            android:background="@drawable/backgroud_radius_50"
+            android:backgroundTint="@color/gray3"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            tools:text="21 апр, сб" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/reduced_spacing"
+            android:background="@drawable/backgroud_radius_50"
+            android:backgroundTint="@color/gray3"
+            android:padding="10dp"
+            android:text="@string/class_text_preview"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="italic"
+            android:tint="@color/gray5"
+            app:icon="@drawable/profile_icon" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/reduced_spacing"
+            android:background="@drawable/backgroud_radius_50"
+            android:backgroundTint="@color/gray3"
+            android:padding="10dp"
+            app:icon="@drawable/settings_icon"
+            app:iconTint="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/recyclerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:background="@drawable/rounded_background_small"
+        android:backgroundTint="@color/gray1"
+        android:padding="@dimen/common_spacing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/options">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="3"
+            tools:listitem="@layout/card_ticlet_preview" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/allTicketsButton"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/background_quick_button"
+        android:backgroundTint="@color/blue"
+        android:fontFamily="@font/sfprodisplayregular"
+        android:text="@string/view_all_tickets"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/subscribe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/recyclerContainer" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/subscribe"
+        android:layout_width="match_parent"
+        android:layout_height="51dp"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:background="@drawable/background_quick_button"
+        android:backgroundTint="@color/gray2"
+        android:fontFamily="@font/sfprodisplaythinitalic"
+        android:text="@string/view_all_tickets"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/allTicketsButton">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/bell"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="@dimen/common_spacing"
+            android:backgroundTint="@color/gray2"
+            android:src="@drawable/subscriptions_icon"
+            android:tint="@color/blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing"
+            android:text="@string/subscription_to_the_price"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/bell"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.google.android.material.materialswitch.MaterialSwitch
+            android:id="@+id/switchButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="@dimen/common_spacing"
+            android:checked="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

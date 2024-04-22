@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <FrameLayout
+        android:id="@+id/circle"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:background="@drawable/background_circle"
+        android:backgroundTint="@color/red"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/reduced_spacing"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintStart_toEndOf="@id/circle"
+        app:layout_constraintTop_toTopOf="@id/circle"
+        tools:text="Уральские авиалинии" />
+
+    <TextView
+        android:id="@+id/timeRange"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/arrow"
+        app:layout_constraintStart_toStartOf="@id/title"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        tools:text="7:00 9:00 13:00 7:00 9:00 13:00 7:00 9:00 13:00 7:00 9:00 13:00" />
+
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:fontFamily="@font/sfprodisplayregular"
+        android:textColor="@color/blue"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintEnd_toStartOf="@id/ruble"
+        app:layout_constraintTop_toTopOf="@id/title"
+        tools:text="2 300" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ruble"
+        android:layout_width="wrap_content"
+        android:layout_height="14dp"
+        android:rotation="5"
+        android:src="@drawable/ruble_icon"
+        android:tint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@id/price"
+        app:layout_constraintEnd_toStartOf="@id/arrow"
+        app:layout_constraintTop_toTopOf="@id/price" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/arrow"
+        android:layout_width="12dp"
+        android:layout_height="12dp"
+        android:src="@drawable/arrow_forward_icon"
+        android:tint="@color/blue"
+        app:layout_constraintBottom_toBottomOf="@id/ruble"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/ruble" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/separator_height"
+        android:layout_marginTop="@dimen/reduced_spacing"
+        android:background="@drawable/line_separator"
+        app:layout_constraintTop_toBottomOf="@id/timeRange" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

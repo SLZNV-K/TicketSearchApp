@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.github.slznvk.presentation.ui.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_searchFragment"
+            app:destination="@id/searchFragment"
+            app:enterAnim="@anim/slide_up"
+            app:popEnterAnim="@anim/slide_up" />
+        <action
+            android:id="@+id/action_mainFragment_to_plugFragment"
+            app:destination="@id/plugFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/plugFragment"
+        android:name="com.github.slznvk.presentation.ui.PlugFragment"
+        android:label="fragment_plug"
+        tools:layout="@layout/fragment_plug" />
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.github.slznvk.presentation.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_plugFragment"
+            app:destination="@id/plugFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_countrySelectedFragment"
+            app:destination="@id/countrySelectedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countrySelectedFragment"
+        android:name="com.github.slznvk.presentation.ui.CountrySelectedFragment"
+        android:label="fragment_country_selected"
+        tools:layout="@layout/fragment_country_selected" >
+        <action
+            android:id="@+id/action_countrySelectedFragment_to_allTicketsFragment"
+            app:destination="@id/allTicketsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allTicketsFragment"
+        android:name="com.github.slznvk.presentation.ui.AllTicketsFragment"
+        android:label="fragment_all_tickets"
+        tools:layout="@layout/fragment_all_tickets" />
+</navigation>

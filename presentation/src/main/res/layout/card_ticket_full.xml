@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/reduced_spacing">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/background_quick_button"
+        android:backgroundTint="@color/gray1"
+        android:padding="@dimen/common_spacing"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/badgeContainer">
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="6 990" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ruble_icon"
+            android:tint="@color/white"
+            app:layout_constraintBottom_toBottomOf="@id/price"
+            app:layout_constraintStart_toEndOf="@id/price"
+            app:layout_constraintTop_toTopOf="@id/price" />
+
+        <FrameLayout
+            android:id="@+id/circle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/background_circle"
+            android:backgroundTint="@color/red"
+            app:layout_constraintBottom_toBottomOf="@id/departureAirport"
+            app:layout_constraintStart_toStartOf="@id/price"
+            app:layout_constraintTop_toTopOf="@id/departureDate" />
+
+        <TextView
+            android:id="@+id/departureDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/reduced_spacing"
+            android:layout_marginTop="@dimen/common_spacing"
+            app:layout_constraintBottom_toTopOf="@id/departureDate"
+            app:layout_constraintStart_toEndOf="@id/circle"
+            app:layout_constraintTop_toBottomOf="@id/price"
+            tools:text="17:45" />
+
+        <FrameLayout
+            android:id="@+id/timeSeparator"
+            android:layout_width="10dp"
+            android:layout_height="1dp"
+            android:layout_marginHorizontal="4dp"
+            android:background="@drawable/line_separator"
+            android:backgroundTint="@color/gray6"
+            app:layout_constraintBottom_toBottomOf="@id/departureDate"
+            app:layout_constraintEnd_toStartOf="@id/arrivalDate"
+            app:layout_constraintStart_toEndOf="@id/departureDate"
+            app:layout_constraintTop_toTopOf="@id/departureDate" />
+
+        <TextView
+            android:id="@+id/arrivalDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/departureDate"
+            app:layout_constraintStart_toEndOf="@id/timeSeparator"
+            app:layout_constraintTop_toTopOf="@id/departureDate"
+            tools:text="19:05" />
+
+        <TextView
+            android:id="@+id/flightTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/common_spacing"
+            app:layout_constraintBottom_toBottomOf="@id/arrivalDate"
+            app:layout_constraintStart_toEndOf="@id/arrivalDate"
+            app:layout_constraintTop_toTopOf="@id/arrivalDate"
+            tools:text="3.5ч в пути" />
+
+        <TextView
+            android:id="@+id/departureAirport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/departureDate"
+            app:layout_constraintTop_toBottomOf="@id/departureDate"
+            tools:text="DME" />
+
+        <TextView
+            android:id="@+id/arrivalAirport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/arrivalDate"
+            app:layout_constraintTop_toBottomOf="@id/arrivalDate"
+            tools:text="AER" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <FrameLayout
+        android:id="@+id/badgeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="21dp"
+        android:background="@drawable/backgroud_radius_50"
+        android:backgroundTint="@color/blue"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="2dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            tools:text="Самый быстрый" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

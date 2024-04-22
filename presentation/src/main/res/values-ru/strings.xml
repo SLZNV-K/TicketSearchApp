@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="air_tickets">Авиабилеты</string>
+    <string name="hotels">Отели</string>
+    <string name="shortly">Короче</string>
+    <string name="subscriptions">Подписки</string>
+    <string name="profile">Профиль</string>
+    <string name="plug_text">Готовим кое-что интересное!</string>
+    <string name="search_for_cheap_flights">Поиск дешевых авиабилетов</string>
+    <string name="departure_hint">Откуда - Москва</string>
+    <string name="arrival_hint">Куда - Турция</string>
+    <string name="description_route_button">Route icon button</string>
+    <string name="difficult_route">Сложный маршрут</string>
+    <string name="istanbul">Стамбул</string>
+    <string name="sochi">Сочи</string>
+    <string name="phuket">Пхукет</string>
+    <string name="popular_destination">Популярное направление</string>
+    <string name="anywhere">Куда угодно</string>
+    <string name="weekend">Выходные</string>
+    <string name="fire">Горячие билеты</string>
+    <string name="the_fields_must_be_filled_in">Поля должны быть заполнены</string>
+    <string name="view_all_tickets">Посмотреть все билеты</string>
+    <string name="subscription_to_the_price">Подписка на цену</string>
+    <string name="returnText">обратно</string>
+    <string name="image_of_istanbul">Изображение Стамбула</string>
+    <string name="image_of_sochi">Изображение Сочи</string>
+    <string name="image_of_phuket">Изображение Пхукета</string>
+    <string name="image_of_offer">Изображение предложения</string>
+</resources>

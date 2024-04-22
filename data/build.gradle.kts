@@ -5,8 +5,9 @@ dependencies {
     val retrofitGsonVersion = "2.9.0"
     val gsonVersion = "2.10.1"
 
-    implementation(project(mapOf("path" to ":domain")))
+    implementation(project(":domain"))
 
-    implementation("com.google.code.gson:gson:$gsonVersion")
-    implementation("com.squareup.retrofit2:converter-gson:$retrofitGsonVersion")
+    implementation("javax.inject:javax.inject:1")
+    api("com.google.code.gson:gson:$gsonVersion")
+    api("com.squareup.retrofit2:converter-gson:$retrofitGsonVersion")
 }

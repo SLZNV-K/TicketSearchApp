@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="air_tickets">Air Tickets</string>
+    <string name="hotels">Hotels</string>
+    <string name="shortly">Shortly</string>
+    <string name="subscriptions">Subscriptions</string>
+    <string name="profile">Profile</string>
+    <string name="plug_text">We are preparing something interesting</string>
+    <string name="search_for_cheap_flights">Поиск дешевых авиабилетов</string>
+    <string name="departure_hint">From where - Moscow</string>
+    <string name="description_search_icon" translatable="false">Search icon</string>
+    <string name="title2" translatable="false">Музыкально отлететь</string>
+    <string name="description_route_button">Route icon button</string>
+    <string name="description_anywhere_button" translatable="false">Anywhere icon button</string>
+    <string name="description_weekend_button" translatable="false">Weekend icon button</string>
+    <string name="description_fire_button" translatable="false">Fire icon button</string>
+    <string name="difficult_route">A difficult route</string>
+    <string name="istanbul">Стамбул</string>
+    <string name="sochi">Sochi</string>
+    <string name="phuket">Phuket</string>
+    <string name="popular_destination">A popular destination</string>
+    <string name="arrival_hint">Where to - Turkey</string>
+    <string name="anywhere">Anywhere</string>
+    <string name="weekend">Weekend</string>
+    <string name="fire">Hot tickets</string>
+    <string name="the_fields_must_be_filled_in">The fields must be filled in</string>
+    <string name="view_all_tickets">View all tickets</string>
+    <string name="subscription_to_the_price">Subscription to the price</string>
+    <string name="returnText">return</string>
+    <string name="class_text_preview" translatable="false">1,эконом</string>
+    <string name="picked_places_format" translatable="false">%1$s-%2$s</string>
+    <string name="passenger_info_format" translatable="false">%s, 1 пассажир</string>
+    <string name="image_of_istanbul">Image of Istanbul</string>
+    <string name="image_of_sochi">Image of Sochi</string>
+    <string name="image_of_phuket">Image of Phuket</string>
+    <string name="image_of_offer">Image of offer</string>
+</resources>
