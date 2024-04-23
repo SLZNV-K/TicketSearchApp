@@ -26,4 +26,10 @@
     <string name="image_of_sochi">Изображение Сочи</string>
     <string name="image_of_phuket">Изображение Пхукета</string>
     <string name="image_of_offer">Изображение предложения</string>
+    <string name="direct_flights">Прямые рейсы</string>
+    <string name="download_error">Ошибка загрузки</string>
+    <string name="retry">Повторить</string>
+    <string name="flight_time_format">%s / Без пересадок</string>
+    <string name="filter">Фильтр</string>
+    <string name="price_chart">График цен</string>
 </resources>

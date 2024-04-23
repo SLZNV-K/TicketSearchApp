@@ -14,6 +14,6 @@ data class Ticket(
     val handLuggage: HandLuggage?,
     val isReturnable: Boolean,
     val isExchangable: Boolean
-)
+) : ListItem
 
-data class Tickets(val tickets: List<Ticket>)
+data class Tickets(val tickets: List<Ticket>) : ListItem

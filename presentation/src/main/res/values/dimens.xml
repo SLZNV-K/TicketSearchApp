@@ -4,4 +4,5 @@
     <dimen name="reduced_spacing">8dp</dimen>
     <dimen name="hints_image_size">48dp</dimen>
     <dimen name="separator_height">1dp</dimen>
+    <dimen name="dialog_margin_top">56dp</dimen>
 </resources>

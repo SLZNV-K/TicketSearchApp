@@ -13,8 +13,7 @@
         <action
             android:id="@+id/action_mainFragment_to_searchFragment"
             app:destination="@id/searchFragment"
-            app:enterAnim="@anim/slide_up"
-            app:popEnterAnim="@anim/slide_up" />
+            app:enterAnim="@anim/slide_up" />
         <action
             android:id="@+id/action_mainFragment_to_plugFragment"
             app:destination="@id/plugFragment" />
@@ -30,11 +29,11 @@
         android:label="fragment_search"
         tools:layout="@layout/fragment_search" >
         <action
-            android:id="@+id/action_searchFragment_to_plugFragment"
-            app:destination="@id/plugFragment" />
-        <action
             android:id="@+id/action_searchFragment_to_countrySelectedFragment"
             app:destination="@id/countrySelectedFragment" />
+        <action
+            android:id="@+id/action_searchFragment_to_plugFragment"
+            app:destination="@id/plugFragment" />
     </fragment>
     <fragment
         android:id="@+id/countrySelectedFragment"

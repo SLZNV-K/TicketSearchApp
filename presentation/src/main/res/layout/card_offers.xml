@@ -27,7 +27,8 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprodisplaybold"
+        android:layout_marginTop="@dimen/reduced_spacing"
+        android:textAppearance="@style/title3"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@id/cardImage"
@@ -38,8 +39,8 @@
         android:id="@+id/town"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/sfprodisplaymedium"
-        android:textSize="14sp"
+        android:textAppearance="@style/text2"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="@id/cardImage"
         app:layout_constraintTop_toBottomOf="@id/title"
         tools:text="Будапешт" />
@@ -50,6 +51,7 @@
         android:layout_height="wrap_content"
         android:rotation="45"
         android:src="@drawable/plane_icon"
+        android:textAppearance="@style/text2"
         android:tint="@color/gray6"
         app:layout_constraintStart_toStartOf="@id/cardImage"
         app:layout_constraintTop_toBottomOf="@id/town" />
@@ -59,20 +61,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:fontFamily="@font/sfprodisplaymedium"
-        android:textSize="14sp"
+        android:textAppearance="@style/text2"
+        android:textColor="@color/white"
         android:tint="@color/gray6"
         app:layout_constraintBottom_toBottomOf="@id/iconPlane"
         app:layout_constraintStart_toEndOf="@id/iconPlane"
         app:layout_constraintTop_toTopOf="@id/iconPlane"
-        tools:text="от 2000" />
+        tools:text="от 2 000" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iconCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ruble_icon"
-        android:tint="@color/gray6"
+        android:tint="@color/white"
         app:layout_constraintBottom_toBottomOf="@id/price"
         app:layout_constraintStart_toEndOf="@id/price"
         app:layout_constraintTop_toTopOf="@id/price" />

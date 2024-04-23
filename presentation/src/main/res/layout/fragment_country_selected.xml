@@ -28,12 +28,13 @@
             android:digits="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
             android:hint="@string/departure_hint"
             android:inputType="textCapSentences"
+            android:textAppearance="@style/buttonText1"
             android:textColor="@color/white"
             android:textColorHint="@color/gray6"
             app:layout_constraintBottom_toTopOf="@id/placeOfArrival"
             app:layout_constraintStart_toEndOf="@id/iconBack"
             app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/swapButtom"
@@ -74,12 +75,13 @@
             android:digits="АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцчшщъыьэюя"
             android:hint="@string/arrival_hint"
             android:inputType="textCapSentences"
+            android:textAppearance="@style/buttonText1"
             android:textColor="@color/white"
             android:textColorHint="@color/gray6"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/placeOfDeparture"
             app:layout_constraintTop_toBottomOf="@id/placeOfDeparture"
-            tools:ignore="TouchTargetSizeCheck" />
+            tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/clearText"
@@ -93,12 +95,11 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/common_spacing"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/inputField">
@@ -108,27 +109,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/reduced_spacing"
-            android:background="@drawable/backgroud_radius_50"
-            android:backgroundTint="@color/gray3"
-            android:padding="10dp"
+            android:padding="@dimen/reduced_spacing"
             android:text="@string/returnText"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="italic"
-            android:tint="@color/gray7"
-            app:icon="@drawable/add_icon" />
+            android:textAppearance="@style/title4"
+            app:backgroundTint="@color/gray3"
+            app:icon="@drawable/add_icon"
+            app:layout_constraintEnd_toStartOf="@id/todayDate"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/todayDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/reduced_spacing"
-            android:background="@drawable/backgroud_radius_50"
-            android:backgroundTint="@color/gray3"
-            android:padding="10dp"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="italic"
+            android:padding="@dimen/reduced_spacing"
+            android:textAppearance="@style/title4"
+            app:backgroundTint="@color/gray3"
+            app:layout_constraintEnd_toStartOf="@id/category"
+            app:layout_constraintStart_toEndOf="@id/returnDate"
+            app:layout_constraintTop_toTopOf="parent"
             tools:text="21 апр, сб" />
 
         <com.google.android.material.button.MaterialButton
@@ -136,28 +136,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/reduced_spacing"
-            android:background="@drawable/backgroud_radius_50"
-            android:backgroundTint="@color/gray3"
-            android:padding="10dp"
+            android:padding="@dimen/reduced_spacing"
             android:text="@string/class_text_preview"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textStyle="italic"
-            android:tint="@color/gray5"
-            app:icon="@drawable/profile_icon" />
+            android:textAppearance="@style/title4"
+            app:backgroundTint="@color/gray3"
+            app:icon="@drawable/profile_icon"
+            app:iconTint="@color/gray5"
+            app:layout_constraintEnd_toStartOf="@id/settings"
+            app:layout_constraintStart_toEndOf="@id/todayDate"
+            app:layout_constraintTop_toTopOf="parent" />
+
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/settings"
+            style="@style/Widget.Material3.Button.IconButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/reduced_spacing"
-            android:background="@drawable/backgroud_radius_50"
-            android:backgroundTint="@color/gray3"
-            android:padding="10dp"
+            android:padding="@dimen/reduced_spacing"
+            app:backgroundTint="@color/gray3"
             app:icon="@drawable/settings_icon"
-            app:iconTint="@color/white" />
+            app:iconTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/category"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TouchTargetSizeCheck" />
 
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/recyclerContainer"
@@ -166,12 +170,21 @@
         android:layout_marginTop="@dimen/common_spacing"
         android:background="@drawable/rounded_background_small"
         android:backgroundTint="@color/gray1"
+        android:orientation="vertical"
         android:padding="@dimen/common_spacing"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/options">
 
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="24dp"
+            android:text="@string/direct_flights"
+            android:textAppearance="@style/title2"
+            android:textColor="@color/white" />
+
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:orientation="vertical"
@@ -180,33 +193,33 @@
             tools:listitem="@layout/card_ticlet_preview" />
     </LinearLayout>
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/allTicketsButton"
         android:layout_width="match_parent"
         android:layout_height="42dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/background_quick_button"
         android:backgroundTint="@color/blue"
-        android:fontFamily="@font/sfprodisplayregular"
         android:text="@string/view_all_tickets"
+        app:cornerRadius="@dimen/reduced_spacing"
+        android:textAppearance="@style/buttonText1"
         android:textColor="@color/white"
-        android:textSize="16sp"
+        android:textStyle="normal|italic"
         app:layout_constraintBottom_toTopOf="@id/subscribe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/recyclerContainer" />
+        app:layout_constraintTop_toBottomOf="@id/recyclerContainer"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/subscribe"
         android:layout_width="match_parent"
         android:layout_height="51dp"
-        android:layout_marginTop="@dimen/common_spacing"
+        android:layout_marginTop="24dp"
         android:background="@drawable/background_quick_button"
         android:backgroundTint="@color/gray2"
-        android:fontFamily="@font/sfprodisplaythinitalic"
         android:text="@string/view_all_tickets"
+        android:textAppearance="@style/text1"
         android:textColor="@color/white"
-        android:textSize="16sp"
         app:layout_constraintTop_toBottomOf="@id/allTicketsButton">
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -219,7 +232,8 @@
             android:tint="@color/blue"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -241,8 +255,36 @@
             android:checked="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/errorLoadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/common_spacing"
+        android:text="@string/download_error"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/retryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/reduced_spacing"
+        android:backgroundTint="@color/blue"
+        android:padding="@dimen/reduced_spacing"
+        android:text="@string/retry"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/errorLoadingText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

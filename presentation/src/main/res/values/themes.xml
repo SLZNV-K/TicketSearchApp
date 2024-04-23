@@ -1,13 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="some_id">
+    <style name="Base.Theme.TicketSearchApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/blue</item>
+
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/dark_green</item>
+        <item name="colorOnSecondary">@color/orange</item>
+    </style>
+
+    <style name="title1">
+        <item name="fontFamily">@font/sfprodisplaysemibold</item>
         <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
         <item name="android:textColor">#D9D9D9</item>
         <item name="android:shadowColor">#40000000</item>
         <item name="android:shadowDx">0</item>
         <item name="android:shadowDy">4</item>
         <item name="android:shadowRadius">4</item>
     </style>
+
+    <style name="title2">
+        <item name="fontFamily">@font/sfprodisplaysemibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="title3">
+        <item name="fontFamily">@font/sfprodisplaymedium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="title4">
+        <item name="fontFamily">@font/sfprodisplayregular</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:textStyle">italic</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="text1">
+        <item name="fontFamily">@font/sfprodisplayregular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="text2">
+        <item name="fontFamily">@font/sfprodisplaysemibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
+    <style name="buttonText1">
+        <item name="fontFamily">@font/sfprodisplayregular</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#D9D9D9</item>
+        <item name="android:shadowColor">#40000000</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">4</item>
+        <item name="android:shadowRadius">4</item>
+    </style>
+
 
 </resources>

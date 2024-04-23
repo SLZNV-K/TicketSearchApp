@@ -5,7 +5,7 @@ data class Offer(
     val title: String,
     val town: String,
     val price: Price,
-)
+) : ListItem
 
-data class Offers(val offers: List<Offer>)
+data class Offers(val offers: List<Offer>) : ListItem
 

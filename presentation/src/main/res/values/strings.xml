@@ -28,10 +28,16 @@
     <string name="subscription_to_the_price">Subscription to the price</string>
     <string name="returnText">return</string>
     <string name="class_text_preview" translatable="false">1,эконом</string>
-    <string name="picked_places_format" translatable="false">%1$s-%2$s</string>
+    <string name="picked_places_format" translatable="false">%1$s - %2$s</string>
     <string name="passenger_info_format" translatable="false">%s, 1 пассажир</string>
     <string name="image_of_istanbul">Image of Istanbul</string>
     <string name="image_of_sochi">Image of Sochi</string>
     <string name="image_of_phuket">Image of Phuket</string>
     <string name="image_of_offer">Image of offer</string>
+    <string name="direct_flights">Direct flights</string>
+    <string name="download_error">Download error</string>
+    <string name="retry">Retry</string>
+    <string name="flight_time_format">%s / No transfers</string>
+    <string name="filter">Filter</string>
+    <string name="price_chart">Price chart</string>
 </resources>
