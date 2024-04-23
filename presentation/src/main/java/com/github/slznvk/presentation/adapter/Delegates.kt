@@ -1,5 +1,7 @@
 package com.github.slznvk.presentation.adapter
 
+import android.content.res.ColorStateList
+import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
 import com.github.slznvk.domain.dto.ListItem
 import com.github.slznvk.domain.dto.Offer
@@ -11,7 +13,7 @@ import com.github.slznvk.presentation.databinding.CardTicketFullBinding
 import com.github.slznvk.presentation.databinding.CardTicletPreviewBinding
 import com.hannesdorfmann.adapterdelegates4.dsl.adapterDelegateViewBinding
 import java.text.SimpleDateFormat
-import java.util.*
+import java.util.Locale
 import kotlin.math.absoluteValue
 import kotlin.math.roundToInt
 
@@ -47,7 +49,17 @@ object Delegates {
             bind {
                 binding.title.text = item.title
                 binding.price.text = formatPriceWithSpaces(item.price.value)
-                binding.timeRange.text = item.timeRange.toString()
+                binding.timeRange.text = item.timeRange.joinToString(" ")
+                when (item.id) {
+                    1L -> binding.circle.backgroundTintList =
+                        ColorStateList.valueOf(ContextCompat.getColor(context, R.color.red))
+
+                    10L -> binding.circle.backgroundTintList =
+                        ColorStateList.valueOf(ContextCompat.getColor(context, R.color.blue))
+
+                    else -> binding.circle.backgroundTintList =
+                        ColorStateList.valueOf(ContextCompat.getColor(context, R.color.white))
+                }
             }
         }
 
